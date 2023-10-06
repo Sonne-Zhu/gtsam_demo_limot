@@ -4,7 +4,7 @@ It can illustrate and verify that gtsam is used correctly in our work [LIMOT](ht
 * Curve fitting: In LIMOT, we use curve fitting to predict the object's position for object tracking. The optimization problem of curve fitting is solved by gtsam.
 * Ternary factor: Ternary factors are used to construct the collaborative optimization factor graph in LIMOT.
 In gtsam, the partial derivatives of the error function with respect to each node variable are required to customize a factor.
-The relevant derivation procedure for the ternary factor can be found in math.pdf.
+The relevant derivation procedure for the ternary factor with node type SE(3) can be found in /math/math.pdf.
 The rest of the factors in the collaborative optimization factor graph can be used directly in gtsam.
 ## Dependency
 * [gtsam]([https://gtsam.org/get_started/](https://github.com/borglab/gtsam/releases/tag/4.0.3))(Georgia Tech Smoothing and Mapping library)
