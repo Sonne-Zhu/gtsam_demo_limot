@@ -1,5 +1,11 @@
 # gtsam_demo_limot
-A gtsam demo contains the implementation of curve fitting and the definition and usage of ternary factors with node type SE(3).
+This gtsam demo contains the implementation of curve fitting and the definition and usage of ternary factors with node type SE(3). 
+It can illustrate and verify that gtsam is used correctly in our work [LIMOT](https://github.com/tiev-tongji/LIMOT).
+* Curve fitting: In LIMOT, we use curve fitting to predict the object's position for object tracking. The optimization problem of curve fitting is solved by gtsam.
+* Ternary factor: Ternary factors are used to construct the collaborative optimization factor graph in LIMOT.
+In gtsam, the partial derivatives of the error function with respect to each node variable are required to customize a factor.
+The relevant derivation procedure for the ternary factor can be found in math.pdf.
+The rest of the factors in the collaborative optimization factor graph can be used directly in gtsam.
 ## Dependency
 * [gtsam]([https://gtsam.org/get_started/](https://github.com/borglab/gtsam/releases/tag/4.0.3))(Georgia Tech Smoothing and Mapping library)
   ```
